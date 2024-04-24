@@ -1,6 +1,13 @@
 name: CI
 
-on: [push]
+on:
+  workflow_dispatch:
+    inputs:
+      LDCHECK:
+        description: 'Use LDCHECK'
+        required: false
+        default: 'false'
+        type: boolean
 
 jobs:
   build:
